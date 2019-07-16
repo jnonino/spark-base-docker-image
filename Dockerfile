@@ -3,7 +3,7 @@ LABEL maintainer="Julian Nonino <noninojulian@gmail.com>"
 
 # Install required tools, tar, curl and Java JRE
 RUN apt-get update -y && \
-    apt-get install -y tar curl openjdk-8-jre-headless net-tools iproute python3 python3-setuptools python3-pip && \
+    apt-get install -y tar curl openjdk-8-jre-headless net-tools iproute2 python3 python3-setuptools python3-pip && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
