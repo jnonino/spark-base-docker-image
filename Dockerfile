@@ -10,8 +10,8 @@ RUN apt-get update -y && \
 # Install Spark
 ENV SPARK_VERSION 2.4.4
 ENV HADOOP_VERSION 2.7
-RUN curl -O https://www.apache.org/dyn/closer.lua/spark/spark-$SPARK_VERSION/spark-$SPARK_VERSION-bin-hadoop$HADOOP_VERSION.tgz && \
-    tar -xvf spark-$SPARK_VERSION-bin-hadoop$HADOOP_VERSION.tgz && \
+RUN curl -O http://mirror.ox.ac.uk/sites/rsync.apache.org/spark/spark-$SPARK_VERSION/spark-$SPARK_VERSION-bin-hadoop$HADOOP_VERSION.tgz && \
+    tar -xzvf spark-$SPARK_VERSION-bin-hadoop$HADOOP_VERSION.tgz && \
     rm -rf spark-$SPARK_VERSION-bin-hadoop$HADOOP_VERSION.tgz && \
     mv spark-$SPARK_VERSION-bin-hadoop$HADOOP_VERSION spark && \
     mv spark /opt && \
